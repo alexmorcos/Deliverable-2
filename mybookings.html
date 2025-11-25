@@ -1,0 +1,192 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Here</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <h1>Campus Booking System</h1>
+        <nav>
+            <a href="index.html">Log out</a>
+        </nav>
+    </header>
+
+    <div class="sidebar">
+        <button id="openCloseButton">&plus;</button>
+        <h2>Menu</h2>
+        <a href="user-dashboard.html">Home</a>
+        <a href="announcement.html">Announcements</a>
+        <a href="resources.html">Resources</a>
+        <a href="booking.html">Bookings</a>
+        <a href="mybookings.html">My Bookings</a>
+        <a href="admin.html">Admin</a>
+    </div>
+    <main class="content">
+        <div class="mainRow">
+            <section class="container">
+                <h1>Browse Your Bookings</h1>
+                <p>Here you may modify, reschedule, extend or even cancel your bookings.</p>
+
+                <div>
+                    <label for="when">Sort by:</label>
+                    <select id="when" name="when">
+                        <option value="past">Past</option>
+                        <option value="future">Future</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="criteria">
+                <h2>Select Criteria</h2>
+                <button id="clear">Clear</button>
+                <div class="filter-buttons">
+                    <div class="filter-section">
+                        <h3>Rooms</h3>
+                        <button data-type="study">Study Rooms</button>
+                        <button data-type="work">TeamWork Rooms</button>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Labs</h3>
+                        <button data-type="soen">SOEN Labs</button>
+                        <button data-type="comp">COMP Labs</button>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Tech equipement</h3>
+                        <button data-type="computers">Computers</button>
+                        <button data-type="computers">Mouse</button>
+                        <button data-type="computers">KeyBoards</button>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Sports equipement</h3>
+                        <button data-type="bball">Basketball</button>
+                        <button data-type="soccer">Soccer</button>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Availability</h3>
+                        <button data-type="available">Open seats</button>
+                        <button data-type="!available">No open seats</button>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="myEntries" class="myEntries">
+                <ul class="mybookingBlock">
+                    <li class="bookingOpp">
+                        <img src="classPhoto.jpg" alt="Resource Image" class="booking-image">
+                        <div class="bookingDetails">
+                            <h3>Coordinates</h3>
+                            <p>Where to find said listing</p>
+                            <p>When is it available</p>
+                        </div>
+                        <div class="bookingInfo">
+                            <h3>Title for the listing</h3>
+                            <p>Infos on the listings blalblalbla lolololol lolololololol</p>
+                        </div>
+                        <div class="modifyMenu">
+                            <h3>Modify Menu</h3>
+                            <button class="openPopupBtn modifyButton">Modify</button>
+                            <button class="openPopupBtn modifyButton">Reschedule</button>
+                            <button class="openPopupBtn modifyButton">Extend</button>
+                            <button class="modifyButton">Cancel</button>
+                        </div>
+                    </li>
+
+                    <li class="bookingOpp">
+                        <img src="classPhoto.jpg" alt="Resource Image" class="booking-image">
+                        <div class="bookingDetails">
+                            <h3>Coordinates</h3>
+                            <p>Where to find said listing</p>
+                            <p>When is it available</p>
+                        </div>
+                        <div class="bookingInfo">
+                            <h3>Title for the listing</h3>
+                            <p>Infos on the listings blalblalbla lolololol lolololololol</p>
+                        </div>
+                        <div class="modifyMenu">
+                            <h3>Modify Menu</h3>
+                            <button class="openPopupBtn modifyButton">Modify</button>
+                            <button class="openPopupBtn modifyButton">Reschedule</button>
+                            <button class="openPopupBtn modifyButton">Extend</button>
+                            <button class="modifyButton">Cancel</button>
+                        </div>
+                    </li>
+                    <li class="bookingOpp">
+                        <img src="classPhoto.jpg" alt="Resource Image" class="booking-image">
+                        <div class="bookingDetails">
+                            <h3>Coordinates</h3>
+                            <p>Where to find said listing</p>
+                            <p>When is it available</p>
+                        </div>
+                        <div class="bookingInfo">
+                            <h3>Title for the listing</h3>
+                            <p>Infos on the listings</p>
+                        </div>
+                        <div class="modifyMenu">
+                            <h3>Modify Menu</h3>
+                            <button class="openPopupBtn modifyButton">Modify</button>
+                            <button class="openPopupBtn modifyButton">Reschedule</button>
+                            <button class="openPopupBtn modifyButton">Extend</button>
+                            <button class="modifyButton">Cancel</button>
+                        </div>
+                    </li>
+                    <li class="bookingOpp">
+                        <img src="classPhoto.jpg" alt="Resource Image" class="booking-image">
+                        <div class="bookingDetails">
+                            <h3>Coordinates</h3>
+                            <p>Where to find said listing</p>
+                            <p>When is it available</p>
+                        </div>
+                        <div class="bookingInfo">
+                            <h3>Title for the listing</h3>
+                            <p>Infos on the listings</p>
+                        </div>
+                        <div class="modifyMenu">
+                            <h3>Modify Menu</h3>
+                            <button class="openPopupBtn modifyButton">Modify</button>
+                            <button class="openPopupBtn modifyButton">Reschedule</button>
+                            <button class="openPopupBtn modifyButton">Extend</button>
+                            <button class="openPopupBtn modifyButton">Cancel</button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="popupOverlay" class="overlay">
+            <div class="popup">
+                <span id="closePopup" class="close">&times;</span>
+                <h2 id="popupTitle">Title of the booking</h2>
+                <p id="popupInfo">Infos on the booking</p>
+                <p style="margin-top: 50px">Please enter the date you wish to book for</p>
+                <div class="bookingInputs">
+                    <input type="date" id="bookingDate">
+                    <button id="confirmBooking">Confirm Booking</button>
+                </div>
+            </div>
+
+        <div id="popupOverlay" class="overlay">
+            <div class="popup">
+                <span id="closePopup" class="close">&times;</span>
+                <h2 id="popupTitle">Title of the booking</h2>
+                <p id="popupInfo">Infos on the booking</p>
+                <p style="margin-top: 50px">Please enter the date you wish to book for</p>
+                <div class="bookingInputs">
+                    <input type="date" id="bookingDate">
+                    <button id="confirmBooking">Confirm Booking</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+</body>

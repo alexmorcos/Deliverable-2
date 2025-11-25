@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<link rel="stylesheet" href="style-dashboard.css">
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+<html>
+<body>
+  <header class="topbar">
+          <h1>Campus Booking System</h1>
+          <nav>
+            <a href="index.html">Log out</a>
+        </nav>
+  </header>
+
+  <div class="sidebar">
+    <button id="openCloseButton">&plus;</button>
+    <h2>Menu</h2>
+    <a  href="user-dashboard.html">Home</a>
+    <a  href="announcement.html">Announcements</a>
+    <a  href="resources.html">Resources</a>
+    <a  href="booking.html">Bookings</a>
+    <a  href="mybookings.html">My Bookings</a>
+    <a  href="admin.html">Admin</a>
+  </div>
+
+  <main>
+    <section class="cards">
+      <section class="dashboard-grid">
+        <div class="card card-square resources">
+          <div class="square-inner center">
+            <h3 class="card-title">Resources Available</h3>
+            <div class="stat-number">12</div> 
+          </div>
+        </div>
+
+        <div class="card card-square past">
+          <div class="square-inner center">
+            <h3 class="card-title">Past Bookings</h3>
+            <p class="stat-number">5</p>
+          </div>
+        </div>
+        <div class="card card-square upcoming">
+          <div class="square-inner center">
+            <h3 class="card-title">Upcoming Bookings</h3>
+            <div class="stat-number">3</div> 
+          </div>
+        </div>
+
+        <div class="card card-square announcements">
+          <div class="square-inner center">
+            <h3 class="card-title">Announcements</h3>
+            <p class="small.text">No announcements</p>
+         </div>
+        </div>
+
+      </section>
+      <section id="features" class="features-section" style="width: 900px; margin: auto; margin-top: 50px;">
+              <h2>What You Can Do</h2>
+              <div class="features-grid">
+                  <a href="resources.html" class="feature-card">
+                      <h3>📚 Resources Checker</h3>
+                      <p>Check if the resources you want are in stock</p>
+                  </a>
+                  <a href="booking.html" class="feature-card">
+                      <h3>💼 Reserve Rooms and Labs</h3>
+                      <p>Access specialized laboratories and equipment</p>
+                  </a>
+                  <a href="mybookings.html" class="feature-card">
+                      <h3>✅ Manage Bookings</h3>
+                      <p>View, modify or cancel your reservations easily</p>
+                  </a>
+              </div>
+          </section>
+    </section>
+
+    
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

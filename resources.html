@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Resource Booking</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+          <h1>Campus Booking System</h1>
+          <nav>
+            <a href="index.html">Log out</a>
+        </nav>
+  </header>
+  
+  <div class="sidebar">
+    <button id="openCloseButton">&plus;</button>
+    <h2>Menu</h2>
+    <a  href="user-dashboard.html">Home</a>
+    <a  href="announcement.html">Announcements</a>
+    <a  href="resources.html">Resources</a>
+    <a  href="booking.html">Bookings</a>
+    <a  href="mybookings.html">My Bookings</a>
+    <a  href="admin.html">Admin</a>
+  </div>
+
+  <h1>Available Resources</h1>
+  <h1 class="resource-h1">Resource Checker</h1>
+  <input class="searchBar" type="text" placeholder="Search for a resource...">
+
+  <div class="categories">
+    <button class="category-btn active" data-category="pcs">PCs</button>
+    <button class="category-btn" data-category="equipment">Equipment</button>
+    <button class="category-btn" data-category="rooms">Rooms</button>
+  </div>
+
+  <div class="resource-list" id="resourceList"></div>
+
+
+  <script>
+    const resources = {
+      pcs: [
+        { title: "Dell Optiplex 7090", location: "Lab A", used: 8, stock: 12 },
+        { title: "HP EliteDesk 800", location: "Lab B", used: 5, stock: 10 },
+        { title: "HP EliteDesk 800", location: "Lab B", used: 5, stock: 10 },
+        { title: "HP EliteDesk 800", location: "Lab B", used: 6, stock: 10 },
+        { title: "HP EliteDesk 800", location: "Lab B", used: 10, stock: 10 },
+
+      ],
+      equipment: [
+        { title: "Projector Epson X200", location: "Room 302", used: 2, stock: 4 },
+        { title: "3D Printer Prusa i3", location: "MakerLab", used: 1, stock: 3 },
+      ],
+      rooms: [
+        { title: "Study Room 1", location: "Library 2F", used: 1, stock: 1 },
+        { title: "Meeting Room A", location: "Building C", used: 0, stock: 1 },
+      ]
+    };
+
+    const listContainer = document.getElementById('resourceList');
+    const buttons = document.querySelectorAll('.category-btn');
+
+    function renderResources(category) {
+      listContainer.innerHTML = '';
+      resources[category].forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'resource-item';
+        div.innerHTML = `
+          <div class="resource-info">
+            <div class="resource-title">${item.title}</div>
+            <div class="resource-location">${item.location}</div>
+          </div>
+          <div class="resource-stock">${item.used} / ${item.stock} in use</div>
+          <div class="resource-status ${AvailableResources(item.used, item.stock)}">${AvailableResources(item.used, item.stock)}</div>
+        `;
+        listContainer.appendChild(div);
+      });
+    }
+
+    function AvailableResources(a, b) {
+      if(a < b){
+        return "available";
+      }else{
+        return "unavailable";
+      }
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderResources(btn.dataset.category);
+      });
+    });
+
+    // Load default category
+    renderResources('pcs');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus booking Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <h1>Campus Booking System</h1>
+        <nav>
+            <a href="index.html">Log out</a>
+        </nav>
+    </header>
+
+    <div class="sidebar">
+        <button id="openCloseButton">&plus;</button>
+        <h2>Menu</h2>
+        <a href="user-dashboard.html">Home</a>
+        <a href="announcement.html">Announcements</a>
+        <a href="resources.html">resources</a>
+        <a href="booking.html">Bookings</a>
+        <a href="mybookings.html">My Bookings</a>
+        <a href="admin.html">Admin</a>
+    </div>
+    <main class="content">
+
+        <section class="mainRow">
+            <div class="container">
+                <h1>Browse Available Bookings</h1>
+
+                <div class="sortBy">
+                    <div class="dateDisplay">
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" id="startDate" name="startDate">
+
+                        <label for="endDate">End Date:</label>
+                        <input type="date" id="endDate" name="endDate">
+                    </div>
+                </div>
+
+                <div>
+                    <p>Here you may book any available slots. <br> You may use the criteria board to display your desired entries.<br> When you find the listing of you choice, press on the book now button to book it. 
+                    <br>If said booking is already booked or if the chosen booking collides with another of your booking, you may recieve a denial</p>
+                </div>
+            </div>
+
+            <div class="criteria">
+                <h2>Select Criteria</h2>
+                <button id="clear">Clear</button>
+                <div class="filter-buttons">
+                    <div class="filter-section">
+                        <h3>Rooms</h3>
+                        <button data-type="study">Study Rooms</button>
+                        <button data-type="work">TeamWork Rooms</button>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Labs</h3>
+                        <button data-type="soen">SOEN Labs</button>
+                        <button data-type="comp">COMP Labs</button>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Tech equipment</h3>
+                        <button data-type="computers">Computers</button>
+                        <button data-type="computers">Mouse</button>
+                        <button data-type="computers">KeyBoards</button>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Sports equipement</h3>
+                        <button data-type="bball">Basketball</button>
+                        <button data-type="soccer">Soccer</button>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Availability</h3>
+                        <button data-type="available">Open seats</button>
+                        <button data-type="!available">No open seats</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="entries" class="entries">
+                <ul class="bookingBlock">
+                    <li class="bookingOpp">
+                        <img src="classPhoto.jpg" alt="booking Image" class="booking-image">
+                        <div class="bookingDetails">
+                            <h3>Coordinates</h3>
+                            <p>Where to find said listing</p>
+                            <p>When is it available</p>
+                        </div>
+                        <div class="bookingInfo">
+                            <h3>Title for the listing</h3>
+                            <p>Infos on the listings blalblalbla lolololol lolololololol hhahahahahahah</p>
+                            <div class="entry" data-date="2025-10-20">Oct 20, 2025</div>
+                            <time>10:00 to 10:15</time>
+                            <button class="openPopupBtn">Book now</button>
+                        </div>
+                    </li>
+                    <li class="bookingOpp">
+                        <img src="classPhoto.jpg" alt="booking Image" class="booking-image">
+                        <div class="bookingDetails">
+                            <h3>Coordinates</h3>
+                            <p>Where to find said listing</p>
+                            <p>When is it available</p>
+                        </div>
+                        <div class="bookingInfo">
+                            <h3>Title for the listing</h3>
+                            <p>Infos on the listings</p>
+                            <div class="entry" data-date="2025-10-20">Oct 20, 2025</div>
+                            <time>10:00 to 10:15</time>
+                            <button class="openPopupBtn">Book now</button>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="bookingBlock">
+                    <li class="bookingOpp">
+                        <img src="classPhoto.jpg" alt="booking Image" class="booking-image">
+                        <div class="bookingDetails">
+                            <h3>Coordinates</h3>
+                            <p>Where to find said listing</p>
+                            <p>When is it available</p>
+                        </div>
+                        <div class="bookingInfo">
+                            <h3>Title for the listing</h3>
+                            <p>Infos on the listings</p>
+                            <div class="entry" data-date="2025-10-20">Oct 20, 2025</div>
+                            <time>10:00 to 10:15</time>
+                            <button class="openPopupBtn">Book now</button>
+                        </div>
+                    </li>
+                    <li class="bookingOpp">
+                        <img src="classPhoto.jpg" alt="booking Image" class="booking-image">
+                        <div class="bookingDetails">
+                            <h3>Coordinates</h3>
+                            <p>Where to find said listing</p>
+                            <p>When is it available</p>
+                        </div>
+                        <div class="bookingInfo">
+                            <h3>Title for the listing</h3>
+                            <p>Infos on the listings</p>
+                            <div class="entry" data-date="2025-10-20">Oct 20, 2025</div>
+                            <time>10:00 to 10:15</time>
+                            <button class="openPopupBtn">Book now</button>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="bookingBlock">
+                    <li class="bookingOpp">
+                        <img src="classPhoto.jpg" alt="booking Image" class="booking-image">
+                        <div class="bookingDetails">
+                            <h3>Coordinates</h3>
+                            <p>Where to find said listing</p>
+                            <p>When is it available</p>
+                        </div>
+                        <div class="bookingInfo">
+                            <h3>Title for the listing</h3>
+                            <p>Infos on the listings</p>
+                            <div class="entry" data-date="2025-10-20">Oct 20, 2025</div>
+                            <time>10:00 to 10:15</time>
+                            <button class="openPopupBtn">Book now</button>
+                        </div>
+                    </li>
+                    <li class="bookingOpp">
+                        <img src="classPhoto.jpg" alt="booking Image" class="booking-image">
+                        <div class="bookingDetails">
+                            <h3>Coordinates</h3>
+                            <p>Where to find said listing</p>
+                            <p>When is it available</p>
+                        </div>
+                        <div class="bookingInfo">
+                            <h3>Title for the listing</h3>
+                            <p>Infos on the listings</p>
+                            <div class="entry" data-date="2025-10-20">Oct 20, 2025</div>
+                            <button class="openPopupBtn">Book now</button>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="bookingBlock">
+                    <li class="bookingOpp">
+                        <img src="classPhoto.jpg" alt="booking Image" class="booking-image">
+                        <div class="bookingDetails">
+                            <h3>Coordinates</h3>
+                            <p>Where to find said listing</p>
+                            <p>When is it available</p>
+                        </div>
+                        <div class="bookingInfo">
+                            <h3>Title for the listing</h3>
+                            <p>Infos on the listings</p>
+                            <div class="entry" data-date="2025-10-20">Oct 20, 2025</div>
+                            <time>10:00 to 10:15</time>
+                            <button class="openPopupBtn">Book now</button>
+                        </div>
+                    </li>
+                    <li class="bookingOpp">
+                        <img src="classPhoto.jpg" alt="booking Image" class="booking-image">
+                        <div class="bookingDetails">
+                            <h3>Coordinates</h3>
+                            <p>Where to find said listing</p>
+                            <p>When is it available</p>
+                        </div>
+                        <div class="bookingInfo">
+                            <h3>Title for the listing</h3>
+                            <p>Infos on the listings</p>
+                            <div class="entry" data-date="2025-10-20">Oct 20, 2025</div>
+                            <time>10:00 to 10:15</time>
+                            <button class="openPopupBtn">Book now</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="popupOverlay" class="overlay">
+        <div class="popup">
+            <span id="closePopup" class="close">&times;</span>
+            <h2 id="popupTitle">Title of the booking</h2>
+            <p id="popupInfo">Infos on the booking</p>
+            <div class="bookingInputs">
+                <p style="margin-top: 50px">Please enter the date you wish to book for</p>
+                <input type="date" id="bookingDate">
+                <button id="confirmBooking">Confirm Booking</button>
+            </div>
+        </div>
+    </div>
+
+</body>

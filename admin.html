@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - University Resource Booking</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>🏛️ Admin</h1>
+            </div>
+            <div class="user-info">
+                <span>Welcome, Administrator</span>
+                <a href="index.html" class="logout-btn">Home</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <a href="#dashboard" class="nav-link" onclick="showSection('dashboard')">
+                        📊 Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#resources" class="nav-link" onclick="showSection('resources')">
+                        🏢 Manage Resources
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#bookings" class="nav-link" onclick="showSection('bookings')">
+                        📅 Manage Bookings
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <h2>Dashboard Overview</h2>
+                
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🏢</div>
+                        <div class="stat-info">
+                            <h3>Total Resources</h3>
+                            <p class="stat-number">24</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">📅</div>
+                        <div class="stat-info">
+                            <h3>Active Bookings</h3>
+                            <p class="stat-number">156</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">⏰</div>
+                        <div class="stat-info">
+                            <h3>Pending Approvals</h3>
+                            <p class="stat-number">8</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <h3>Total Users</h3>
+                            <p class="stat-number">342</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="dashboard-section">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            ➕ New booking request for Computer Lab A
+                            <small>2 minutes ago</small>
+                        </div>
+                        <div class="activity-item">
+                            ✏️ Study Room B availability updated
+                            <small>15 minutes ago</small>
+                        </div>
+                        <div class="activity-item">
+                            ✅ Booking approved for Conference Room C
+                            <small>1 hour ago</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources Management Section -->
+            <section id="resources" class="content-section">
+                <div class="section-header">
+                    <h2>Manage Resources</h2>
+                    <button class="btn btn-primary">➕ Add New Resource</button>
+                </div>
+
+                <!-- Resources Table -->
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Resource Name</th>
+                                <th>Type</th>
+                                <th>Location</th>
+                                <th>Capacity</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Computer Lab A</td>
+                                <td>Laboratory</td>
+                                <td>Building 1, Floor 2</td>
+                                <td>30</td>
+                                <td><span class="status active">Active</span></td>
+                                <td>
+                                    <button class="btn-small btn-edit">Edit</button>
+                                    <button class="btn-small btn-block">Block</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Study Room B</td>
+                                <td>Study Room</td>
+                                <td>Library, Floor 3</td>
+                                <td>8</td>
+                                <td><span class="status active">Active</span></td>
+                                <td>
+                                    <button class="btn-small btn-edit">Edit</button>
+                                    <button class="btn-small btn-block">Block</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Conference Room C</td>
+                                <td>Meeting Room</td>
+                                <td>Administration Building</td>
+                                <td>15</td>
+                                <td><span class="status maintenance">Maintenance</span></td>
+                                <td>
+                                    <button class="btn-small btn-edit">Edit</button>
+                                    <button class="btn-small btn-unblock">Unblock</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Bookings Management Section -->
+            <section id="bookings" class="content-section">
+                <div class="section-header">
+                    <h2>Manage Bookings</h2>
+                    <div class="filter-options">
+                        <select class="filter-select">
+                            <option>All Bookings</option>
+                            <option>Pending Approval</option>
+                            <option>Approved</option>
+                            <option>Rejected</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Bookings Table -->
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>User</th>
+                                <th>Resource</th>
+                                <th>Date & Time</th>
+                                <th>Purpose</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#BK001</td>
+                                <td>John Smith</td>
+                                <td>Computer Lab A</td>
+                                <td>Oct 29, 2025 - 10:00 AM</td>
+                                <td>Programming Class</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td>
+                                    <button class="btn-small btn-approve">Approve</button>
+                                    <button class="btn-small btn-reject">Reject</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#BK002</td>
+                                <td>Emma Wilson</td>
+                                <td>Study Room B</td>
+                                <td>Oct 30, 2025 - 2:00 PM</td>
+                                <td>Group Study</td>
+                                <td><span class="status approved">Approved</span></td>
+                                <td>
+                                    <button class="btn-small btn-view">View</button>
+                                    <button class="btn-small btn-cancel">Cancel</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#BK003</td>
+                                <td>Michael Johnson</td>
+                                <td>Conference Room C</td>
+                                <td>Nov 1, 2025 - 9:00 AM</td>
+                                <td>Team Meeting</td>
+                                <td><span class="status rejected">Rejected</span></td>
+                                <td>
+                                    <button class="btn-small btn-view">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Simple navigation functionality
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Remove active class from nav items
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => item.classList.remove('active'));
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked nav item
+            event.target.closest('.nav-item').classList.add('active');
+        }
+
+        // Simple button interactions (just for demo)
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('btn-approve')) {
+                alert('Booking approved!');
+            } else if (e.target.classList.contains('btn-reject')) {
+                alert('Booking rejected!');
+            } else if (e.target.classList.contains('btn-block')) {
+                alert('Resource blocked for maintenance!');
+            } else if (e.target.classList.contains('btn-unblock')) {
+                alert('Resource unblocked and available!');
+            }
+        });
+    </script>
+</body>
+</html>

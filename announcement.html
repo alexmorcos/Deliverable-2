@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Resource Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+<html>
+<body>
+
+    <header class="topbar">
+          <h1>Campus Booking System</h1>
+          <nav>
+            <a href="index.html">Log out</a>
+        </nav>
+    </header>
+
+    <div class="sidebar">
+        <button id="openCloseButton">&plus;</button>
+        <h2>Menu</h2>
+        <a  href="user-dashboard.html">Home</a>
+        <a  href="announcement.html">Announcements</a>
+        <a  href="resources.html">Resources</a>
+        <a  href="booking.html">Bookings</a>
+        <a  href="mybookings.html">My Bookings</a>
+        <a  href="admin.html">Admin</a>
+    </div>
+    <main class="content">
+        <section class="cards">  
+            <div class="card-announcement">
+                <h2 class="card-title">Pinned Announcements</h2>
+                <div class="announcement-list">
+                    <div class="announcement-row">
+                        <p class="announcement-text pinned">Library Room 204 temporarily closed for renovations.</p>
+                        <p class="announcement-date">Oct 26, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-announcement">
+                <h2 class="card-title">General Announcements</h2>
+                <div class="announcement-list">
+                    <div class="announcement-row">
+                        <p class="announcement-text pinned">Library Room 204 temporarily closed for renovations.</p>
+                        <p class="announcement-date">Oct 26, 2025</p>
+                    </div>
+                    <div class="announcement-row">
+                        <p class="announcement-text">Study Room 105 now available for 4-person bookings.</p>
+                        <p class="announcement-date">Oct 23, 2025</p>
+                    </div>
+                    <div class="announcement-row">
+                        <p class="announcement-text">System maintenance completed successfully.</p>
+                        <p class="announcement-date">Oct 20, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-announcement">
+                <h2 class="card-title">Past Announcements</h2>
+                <div class="announcement-list">
+                    <div class="announcement-row">
+                        <p class="announcement-text past">Room 301 construction completed — now reopened.</p>
+                        <p class="announcement-date">Oct 18, 2025</p>
+                    </div>
+                    <div class="announcement-row">
+                        <p class="announcement-text past">Server maintenance completed successfully.</p>
+                        <p class="announcement-date">Sep 20, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>    
+</body>
+</html>
