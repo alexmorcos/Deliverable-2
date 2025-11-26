@@ -25,13 +25,26 @@
         <a  href="admin.html">Admin</a>
     </div>
     <main class="content">
-        <section class="cards">  
+        <section class="cards">
+            <div class="card-announcement">
+                <h2 class="card-title">Add Announcement</h2>
+                <textarea class="announcement-box" placeholder=" Add Announcement"></textarea>
+                <div class="row-2">
+                    <input class="date-text" placeholder=" Date of Announcement">
+                    <select class="announcement-type">
+                        <option value="general">General</option>
+                        <option value="pinned">Pinned</option>
+                    </select>
+                    <button class="announcement-submit">Submit Announcement</button>
+                </div>
+            </div>
             <div class="card-announcement">
                 <h2 class="card-title">Pinned Announcements</h2>
                 <div class="announcement-list">
                     <div class="announcement-row">
                         <p class="announcement-text pinned">Library Room 204 temporarily closed for renovations.</p>
                         <p class="announcement-date">Oct 26, 2025</p>
+                        <button class="delete-btn">Delete</button>
                     </div>
                 </div>
             </div>
@@ -42,14 +55,17 @@
                     <div class="announcement-row">
                         <p class="announcement-text pinned">Library Room 204 temporarily closed for renovations.</p>
                         <p class="announcement-date">Oct 26, 2025</p>
+                        <button class="delete-btn">Delete</button>
                     </div>
                     <div class="announcement-row">
                         <p class="announcement-text">Study Room 105 now available for 4-person bookings.</p>
                         <p class="announcement-date">Oct 23, 2025</p>
+                        <button class="delete-btn">Delete</button>
                     </div>
                     <div class="announcement-row">
                         <p class="announcement-text">System maintenance completed successfully.</p>
                         <p class="announcement-date">Oct 20, 2025</p>
+                        <button class="delete-btn">Delete</button>
                     </div>
                 </div>
             </div>
